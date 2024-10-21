@@ -1,4 +1,5 @@
 import 'package:bakers/Widgets/bottom_bar.dart';
+import 'package:bakers/Widgets/carrousel.dart';
 import 'package:bakers/Widgets/pager.dart';
 import 'package:bakers/main.dart';
 import 'package:flutter/material.dart';
@@ -33,10 +34,18 @@ class _LandingPageState extends State<LandingPage> {
     body: Column(
       children: [
         Pager(),
-        Expanded(
-          child: Container()
+        const  Padding(
+        padding: EdgeInsets.all(10),
+        child: Text("Our Products",
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 18
+        ),),
+        ),
+        const Expanded(
+          child:  Carrousel()
           ),
-
+      
        const BottomBar()
       ],
     ),
